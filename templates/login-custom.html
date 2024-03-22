@@ -20,9 +20,9 @@
 <body>
   <div class="container-login">
     <div class="header-login">
-      <img id="logoBppr_img" src="./img/CoolBank.svg" alt="Logo" />
+      <img id="logoCoolBank_img" src="./img/CoolBank.svg" alt="Logo" />
       <div class="frame-login">
-        <span id="logInCoolBank_lbl">Log in to Mi Banco</span>
+        <span id="logInCoolBank_lbl">Log in to Cool Bank</span>
         <span id="yourDetails_lbl">Please enter your details.</span>
       </div>
     </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="username-checkbox-container">
           <label id="title" class="username-checkbox-label" for="rememberUser_chk">Remember Username</label>
-          <input class="username-checkbox" type="checkbox" disabled onclick="updateUI()" id="rememberUser_chk" />
+          <input class="username-checkbox" type="checkbox" onclick="updateUI()" id="rememberUser_chk" />
         </div>
       </div>
       <div class="password-container">
@@ -57,7 +57,7 @@
         <#if error??>${error}</#if>
       </div>
       <div class="submit-container">
-        <button class="submit-button disabled-button" id="continue_btn" type="submit" disabled>
+        <button class="submit-button disabled-button" id="continue_btn" type="submit">
           Continue
         </button>
         <a href="#" class="forgot-link">Forgot username or password?</a>
@@ -65,7 +65,7 @@
     </form>
   </div>
 </body>
-<script>
+<!-- <script>
 
   function updateUI() {
     let userNametextInput = document.getElementById('username_txt').value;
@@ -187,8 +187,10 @@
       toggleButtonStateOnInput();
       clearError();
     });
-</script>
+</script> -->
 
+<script src="./js/toggleCheckBox.js"></script>
 <script src="./js/togglePasswordIcon.js"></script>
+
 
 </html>
