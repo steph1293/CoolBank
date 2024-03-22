@@ -269,6 +269,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
+    width:295px;
  
 }
 
@@ -286,10 +287,11 @@ body {
 
 .submit-container {
     display: flex;
-    width: 345px;
+    width: 260px;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    padding-right:300px;
 }
 
 .forgot-link {
