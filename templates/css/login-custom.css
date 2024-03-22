@@ -6,6 +6,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #8caad8
 }
 
 .container-login {
@@ -15,6 +16,8 @@ body {
     gap: 28px;
     display: inline-flex;
     margin: 48px 24px;
+    width: 300px;
+    height: 100px;
 }
 
 .header-login {
@@ -28,7 +31,7 @@ body {
     display: inline-flex;
 }
 
-#logoBppr_img {
+#logoCoolBank_img {
     display: flex;
     width: 74.057px;
     height: 36px;
@@ -42,9 +45,10 @@ body {
     align-items: center;
     gap: 8px;
     align-self: stretch;
+    //background: black
 }
 
-#logInMiBanco_lbl {
+#logInCoolBank_lbl {
     width: 100%;
     color: #1C3665;
     font-size: 24px;
@@ -68,7 +72,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 28px;
+    justify-content: flex-start;
+    gap: 28px;
+    display: inline-flex;
+    margin: 48px 24px;
+    width: 300px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background: #eeeeee
 }
 
 .username-label {
@@ -78,6 +92,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
+    padding: 20px;
 }
 
 .username-input {
@@ -88,6 +103,7 @@ body {
     font-family: Arial;
     font-weight: 400;
     align-self: stretch;
+    width: 200px;
 }
 
 .username-input:focus {
@@ -195,7 +211,7 @@ body {
 
 .password-input-container {
     display: flex;
-    width: 345px;
+    width: 250px;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
@@ -253,6 +269,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
+    width:295px;
  
 }
 
@@ -270,10 +287,11 @@ body {
 
 .submit-container {
     display: flex;
-    width: 345px;
+    width: 260px;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    padding-right:300px;
 }
 
 .forgot-link {
