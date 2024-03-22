@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="${url.resourcesPath}/css/login-custom.css" />
+  <link rel="stylesheet" href="./css/login-custom.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <style>
     .toggle-password img {
@@ -20,13 +20,13 @@
 <body>
   <div class="container-login">
     <div class="header-login">
-      <img id="logoBppr_img" src="${url.resourcesPath}/img/CoolBank.svg" alt="Logo" />
+      <img id="logoBppr_img" src="./img/CoolBank.svg" alt="Logo" />
       <div class="frame-login">
         <span id="logInCoolBank_lbl">Log in to Mi Banco</span>
         <span id="yourDetails_lbl">Please enter your details.</span>
       </div>
     </div>
-    <form class="form-container" action="${url.loginAction}" method="post">
+    <form class="form-container" action="https://google.com" method="post">
       <div class="username-container">
         <div class="username-input-container">
           <label class="username-label" for="username_txt">Username</label>
@@ -45,11 +45,11 @@
             placeholder="Enter your password" required />
           <i class="toggle-password" id="viewIcon_img" style="color: gray; display: none; cursor: pointer;"
             onclick="showTogglePasswordIcon()">
-            <img src="${url.resourcesPath}/img/showPasswordIcon.png" alt="Show password" />
+            <img src="./img/showPasswordIcon.png" alt="Show password" />
           </i>
           <i class="toggle-password" id="hideIcon_img" style="color: gray; display: none; cursor: pointer;"
             onclick="showTogglePasswordIcon()">
-            <img src="${url.resourcesPath}/img/hidePasswordIcon.png" alt="Hide password" />
+            <img src="./img/hidePasswordIcon.png" alt="Hide password" />
           </i>
         </div>
       </div>
@@ -182,13 +182,13 @@
       updateUI();
     });
   document
-    .getElementById("password_txt")
+    .getElementById("password_tx")
     .addEventListener("input", () => {
       toggleButtonStateOnInput();
       clearError();
     });
 </script>
 
-<script src="${url.resourcesPath}/js/togglePasswordIcon.js"></script>
+<script src="./js/togglePasswordIcon.js"></script>
 
 </html>

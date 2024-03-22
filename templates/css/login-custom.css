@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-login {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 28px;
+    display: inline-flex;
+    margin: 48px 24px;
+}
+
+.header-login {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    display: inline-flex;
+}
+
+#logoBppr_img {
+    display: flex;
+    width: 74.057px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+
+#logInMiBanco_lbl {
+    width: 100%;
+    color: #1C3665;
+    font-size: 24px;
+    font-family: Manrope, serif;
+    font-weight: 700;
+    line-height: 28.80px;
+    word-wrap: break-word
+}
+
+#yourDetails_lbl {
+    width: 100%;
+    color: #121212;
+    font-size: 16px;
+    font-family: Open Sans, serif;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.username-label {
+    color: #121212;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.username-input {
+    border: 1px solid #D0D7DE;
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: Arial;
+    font-weight: 400;
+    align-self: stretch;
+}
+
+.username-input:focus {
+    border: none;
+    outline: #121212 solid 1px;
+    color: #121212;
+}
+
+.username-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.username-input-container {
+    display: flex;
+    width: 345px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.username-checkbox-label {
+    color: #999;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+.username-checkbox {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin: 0;
+    padding: 0;
+}
+
+.username-checkbox::before {
+    content: '\2713';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    font-size: 10px;
+}
+
+.username-checkbox:checked::before {
+    opacity: 1;
+}
+
+.username-checkbox-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 345px;
+    align-items: center;
+    gap: 4px;
+    justify-content: flex-end;
+}
+
+.username-checkbox-container input[type="checkbox"] {
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+}
+
+.username-checkbox-container input[type="checkbox"]:disabled {
+    background-color: white;
+    border-color: gray;
+    cursor: not-allowed;
+}
+
+.username-checkbox-container input[type="checkbox"]:not(:disabled):checked {
+    background-color: black;
+    border-color: black;
+}
+
+.username-checkbox-container input[type="checkbox"]:not(:disabled):not(:checked) {
+    background-color: gray;
+    border-color: gray;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.password-input-container {
+    display: flex;
+    width: 345px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+}
+
+.password-label {
+    color: #121212;
+    font-family: Arial, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.password-input {
+    border: 1px solid #D0D7DE;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-family: Arial, serif;
+    font-weight: 400;
+    align-self: stretch;
+    position: relative;
+}
+
+.password-input:focus {
+    border: none;
+    outline: #121212 solid 1px;
+    color: #121212;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 65%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.submit-button {
+    display: flex;
+    padding: 14px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: #2F79C3;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20);
+    border: none;
+    color: var(--system-white, #FFF);
+    font-family: Arial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+ 
+}
+
+.submit-button:hover {
+    opacity: 0.8;
+}
+
+.submit-button-active {
+    background: #1C3665;
+}
+
+.submit-button-active:hover{
+    opacity: 1;
+}
+
+.submit-container {
+    display: flex;
+    width: 345px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.forgot-link {
+    color: #2F79C3;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-decoration: none;
+}
+
+.spinner {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*deshabilitando el icono del ojo que los buscadores
+generan de manera automatica en los input tipo password*/
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none !important;
+}
+
+.disabled-button {
+    background: #E7E7E7;
+    color: #A5A5A5;
+    cursor: not-allowed;
+}
+
+.error {
+    color: #FD2E2E;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+.error-outline {
+    border: 1px solid #FD2E2E;
+    background: var(--system-white, #FFF);
+}
+.lds-spinner {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    animation: spin 3s linear infinite;
+
+}
+
+.lds-spinner div {
+    transform-origin: 10px 10px;
+    animation: lds-spinner 1.2s linear infinite ;
+
+}
+
+.lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 9px;
+    width: 3px;
+    height: 6px;
+    border-radius: 30%;
+    background: #e0e0e0;
+}
+
+.lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -0.8s;
+}
+
+.lds-spinner div:nth-child(2) {
+    transform: rotate(45deg);
+    animation-delay: -0.7S;
+}
+
+.lds-spinner div:nth-child(3) {
+    transform: rotate(90deg);
+    animation-delay: -0.6s;
+}
+
+.lds-spinner div:nth-child(4) {
+    transform: rotate(135deg);
+    animation-delay: -0.5s;
+}
+
+.lds-spinner div:nth-child(5) {
+    transform: rotate(180deg);
+    animation-delay: -0.4s;
+}
+
+.lds-spinner div:nth-child(6) {
+    transform: rotate(225deg);
+    animation-delay: -0.3s;
+}
+
+.lds-spinner div:nth-child(7) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+}
+
+.lds-spinner div:nth-child(8) {
+    transform: rotate(315deg);
+    animation-delay: -0.1s;
+}
+
+
+@keyframes lds-spinner {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
