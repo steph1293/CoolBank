@@ -36,11 +36,12 @@ body {
     position: relative;
     top: 63%;
     left: 115%;
+    text-align: center;
 }
 
 #logoCoolBank_img {
     display: flex;
-    width: 74.057px;
+    width: 284px;
     height: 36px;
     justify-content: center;
     align-items: center;
@@ -52,7 +53,6 @@ body {
     align-items: center;
     gap: 8px;
     align-self: stretch;
-    //background: black
 }
 
 #logInCoolBank_lbl {
@@ -67,12 +67,12 @@ body {
 
 #yourDetails_lbl {
     width: 100%;
-    color: #121212;
+    color: #ed874a;
     font-size: 16px;
     font-family: Open Sans, serif;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 
 .form-container {
@@ -83,7 +83,7 @@ body {
     justify-content: flex-start;
     gap: 28px;
     display: inline-flex;
-    margin: 48px 300px auto;
+    margin: 48px 335px auto;
     width: 300px;
     height: 500px;
     border: 1px solid #ccc;
