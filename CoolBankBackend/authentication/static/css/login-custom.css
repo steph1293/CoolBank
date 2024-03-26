@@ -6,7 +6,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('/templates/img/CoolBankBackground.svg');
+    background: url('/static/img/CoolBackground.svg');
     background-color: #1f4c58;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -88,7 +88,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
-    //padding: 48px 219px auto;
+    padding: 48px 219px auto;
     background: #eeeeee
 }
 
@@ -110,7 +110,7 @@ body {
     font-family: Arial;
     font-weight: 400;
     align-self: stretch;
-    width: 200px;
+    width: 250px;
 }
 
 .username-input:focus {
