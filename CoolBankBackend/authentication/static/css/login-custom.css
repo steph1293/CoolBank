@@ -6,7 +6,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    //background: url('/templates/img/CoolBankBackground.png');
     background: url('/templates/img/CoolBankBackground.svg');
     background-color: #1f4c58;
     background-repeat: no-repeat;
