@@ -5,18 +5,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/welcome-custom.css' %}" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-   
-    <title>CoolBank</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <title>Cool Bank - Banking Made Easy</title>
   </head>
   <body>
-   
-    <h1>Welcome</h1>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">Cool Bank</a>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Logout</a>
+            </li>
+        </nav>
+      </div>
+    </header>
 
-    <div class="container-login"></div>
-   
+    <div class="container-title">  <header>  <h1>Your Bank Accounts</h1>
+    </header>
+    <main>  <div class="account">  <h2>Checking Account</h2>
+            <p>Account Number: ****-****-1234</p>
+            <p>Available Balance: <span class="balance">$10,234.56</span></p>
+        </div>
+        <div class="account">
+            <h2>Savings Account</h2>
+            <p>Account Number: ****-****-5678</p>
+            <p>Available Balance: <span class="balance">$5,421.87</span></p>
+        </div>
+        <div class="account">
+            <h2>Money Market Account</h2>
+            <p>Account Number: ****-****-9012</p>
+            <p>Available Balance: <span class="balance">$2,789.32</span></p>
+        </div>
+    </main>
+</div>
+  </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; Cool Bank 2024. All Rights Reserved.</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your_fontawesome_kit_id.js" crossorigin="anonymous"></script>
   </body>
 </html>
