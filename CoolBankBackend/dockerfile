@@ -5,8 +5,9 @@ ENV PYTHONUNBUFFERED 1
 ENV PIPENV_VENV_IN_PROJECT 1
 # Super User Variables
 ENV DJANGO_SUPERUSER_PASSWORD="password"
-ENV DJANGO_SUPERUSER_USERNAME="user"
+ENV DJANGO_SUPERUSER_USERNAME="John"
 ENV DJANGO_SUPERUSER_EMAIL="test@gmail.com"
+
 WORKDIR /usr/src/app
 # Install pipenv
 RUN pip install --upgrade pip && pip install pipenv

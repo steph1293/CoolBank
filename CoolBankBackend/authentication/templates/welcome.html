@@ -19,10 +19,10 @@
               <a href="#">Logout</a>
             </li>
         </nav>
-      </div>
+      </div> 
     </header>
-
-    <div class="container-title">  <header>  <h1>Your Bank Accounts</h1>
+    {% if user.is_authenticated %}
+    <div class="container-title">  <header>  <h1>{{user.username}}'s Bank Accounts</h1>
     </header>
     <main>  <div class="account">  <h2>Checking Account</h2>
             <p>Account Number: ****-****-1234</p>
@@ -51,5 +51,6 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/your_fontawesome_kit_id.js" crossorigin="anonymous"></script>
+    {% endif %}
   </body>
 </html>
