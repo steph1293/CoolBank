@@ -16,7 +16,7 @@
         <nav>
           <ul>
             <li>
-              <a href="#">Logout</a>
+              <a href="{% url 'login' %}">Logout</a>
             </li>
         </nav>
       </div> 
@@ -49,7 +49,8 @@
         <a href="#">Terms &amp; Conditions</a>
       </div>
     </footer>
-
+    {% else %}
+    <p>You must be logged in to view your bank account information. Please log in using the form below or visit our secure online banking portal at Cool Bank.</p>
     <script src="https://kit.fontawesome.com/your_fontawesome_kit_id.js" crossorigin="anonymous"></script>
     {% endif %}
   </body>
