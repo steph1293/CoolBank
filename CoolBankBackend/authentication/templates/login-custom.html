@@ -99,7 +99,10 @@
         <div class="error" id="InvalidMessage_LBL">
           {{ form.non_field_errors }}
         </div>
-        {% endif %}
+        {% endif %} {% if messages %} {% for message in messages %}
+        <div class="error">{{ message }}</div>
+        {% endfor %} {% endif %}
+
         <div class="submit-container">
           <button class="submit-button" id="continue_btn" type="submit">
             Continue

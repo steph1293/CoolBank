@@ -1,32 +1,31 @@
-from pydoc import render_doc
+from django.shortcuts import redirect
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.views import LoginView
 from django.views.generic import TemplateView
-from django.urls import reverse_lazy
-from django.contrib.auth.models import User
-from django.shortcuts import redirect, render
-from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
-from django.http import HttpRequest
+from django.contrib import messages
+
+
+from django.contrib.auth.views import LoginView
+from django.shortcuts import redirect
+from django.urls import reverse_lazy
+from django.contrib import messages
+from django.http import HttpResponseRedirect
+
 
 class CustomLoginView(LoginView):
     template_name = "login-custom.html"
-    #redirect_authenticated_user = True
+    redirect_authenticated_user = False
+    success_url = reverse_lazy("welcome")
+
+    def form_valid(self, form):
+        messages.success(self.request, "Login successful.")
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, "Invalid username or password.")
+        return HttpResponseRedirect(self.request.path_info)
+
+
 class CustomWelcomeView(TemplateView):
     template_name = "welcome.html"
-    
-def signin(request):
-
-             if request.method == "POST":
-                username = request.POST['username']
-                password = request.POSR['password']
-                
-                user = authenticate(username=username, password=password)
-                
-                if user is not None:
-                    login(request, user)
-                    fname = user.get_username
-                    return render(request, CustomWelcomeView, {'username': fname})
-
-                else:
-                    return redirect(CustomLoginView)
-                
