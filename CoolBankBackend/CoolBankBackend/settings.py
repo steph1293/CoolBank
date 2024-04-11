@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import logging
+import sys
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -115,29 +117,38 @@ LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
     "formatters": {
-        "simple": {
-            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {message}",
+            "style": "{",
+        },
+        "json_formatter": {
+            "()": "pythonjsonlogger.jsonlogger.JsonFormatter",
+            "format": "%(levelname)s %(asctime)s %(module)s %(message)s",
         },
     },
     "handlers": {
         "console": {
+            "level": "WARNING",
             "class": "logging.StreamHandler",
-            "formatter": "simple",
+            "stream": sys.stdout,
+            "formatter": "verbose",
         },
         "file": {
+            "level": "DEBUG",
             "class": "logging.FileHandler",
-            "filename": "django_logs.log",
-            "formatter": "simple",
+            "filename": "django_app.log",
+            "formatter": "json_formatter",
         },
     },
     "loggers": {
         "django": {
             "handlers": ["console", "file"],
-            "level": "INFO",
+            "level": "DEBUG",
+            "propagate": True,
         },
-        "django.server": {
+        "authentication": {
             "handlers": ["console", "file"],
-            "level": "INFO",
+            "level": "DEBUG",
             "propagate": True,
         },
     },
