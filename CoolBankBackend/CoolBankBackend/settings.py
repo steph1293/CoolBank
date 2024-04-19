@@ -136,8 +136,8 @@ LOGGING = {
         "file": {
             "level": "DEBUG",
             "class": "logging.FileHandler",
-            "filename": "django_app.log",
-            "formatter": "json_formatter",
+            "filename" : "django_app.log",
+            "formatter": "verbose",
         },
     },
     "loggers": {

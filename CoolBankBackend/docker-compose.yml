@@ -7,7 +7,8 @@ services:
       - 8000:8000
     networks:
       - elastic
-
+    volumes:
+      - django-logs:/usr/src/app
   elasticsearch:
     container_name: es-01
     image: docker.elastic.co/elasticsearch/elasticsearch:7.12.0
@@ -42,9 +43,29 @@ services:
     networks:
       - elastic
 
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:7.12.0
+    volumes:
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - django-logs:/usr/src/app/logs:ro
+
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+    networks:
+      - elastic
+    links:
+      - kibana
+      - elasticsearch
+    depends_on:
+      - elasticsearch
+      - django
+    
 volumes:
+  django-logs:
+
   data-01:
     driver: local
+
 
 networks:
   elastic:
